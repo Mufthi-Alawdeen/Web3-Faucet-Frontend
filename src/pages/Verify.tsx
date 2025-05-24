@@ -13,7 +13,7 @@ export default function Verify() {
     }
 
     // Redirect browser to backend verify URL to let server handle redirect
-    window.location.href = `http://localhost:4000/api/verify?token=${token}`;
+    window.location.href = `https://faucet-backend-production.up.railway.app/api/verify?token=${token}`;
   }, [searchParams]);
 
   return (
