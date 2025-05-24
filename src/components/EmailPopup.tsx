@@ -60,11 +60,14 @@ const EmailPopup: React.FC<EmailPopupProps> = ({
     });
 
     try {
-      await fetch("http://localhost:4000/api/subscribe", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name: form.name, email: form.email }),
-      });
+      await fetch(
+        "http://faucet-backend-production.up.railway.app/api/subscribe",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ name: form.name, email: form.email }),
+        }
+      );
 
       setTimeout(() => {
         Swal.fire({
@@ -89,7 +92,7 @@ const EmailPopup: React.FC<EmailPopupProps> = ({
 
     try {
       const res = await fetch(
-        `http://localhost:4000/api/check-subscription?email=${encodeURIComponent(
+        `http://faucet-backend-production.up.railway.app/api/check-subscription?email=${encodeURIComponent(
           checkEmail
         )}`
       );
