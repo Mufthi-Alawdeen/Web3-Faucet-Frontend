@@ -61,7 +61,7 @@ const EmailPopup: React.FC<EmailPopupProps> = ({
 
     try {
       await fetch(
-        "http://faucet-backend-production.up.railway.app/api/subscribe",
+        "https://faucet-backend-production.up.railway.app/api/subscribe",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -92,7 +92,7 @@ const EmailPopup: React.FC<EmailPopupProps> = ({
 
     try {
       const res = await fetch(
-        `http://faucet-backend-production.up.railway.app/api/check-subscription?email=${encodeURIComponent(
+        `https://faucet-backend-production.up.railway.app/api/check-subscription?email=${encodeURIComponent(
           checkEmail
         )}`
       );
