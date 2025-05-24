@@ -66,7 +66,7 @@ export default function Faucet() {
 
     try {
       const res = await axios.post<{ txHash: string }>(
-        "http://faucet-backend-production.up.railway.app/api/faucet",
+        "https://faucet-backend.up.railway.app/api/faucet",
         { walletAddress, email }
       );
 
